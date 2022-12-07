@@ -1,6 +1,43 @@
 {% extends "base.html" %}
-{% block title %} Flask App - Vercel {% endblock %}
+{% block title %} NutriApp {% endblock %}
 {% block body %}
-    <h1>{{hello}}</h1>
-    <p>{{content}}</p>
+    <main>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="limit" class="form-label">Batas Berat:</label>
+                <input type="number" name="limit" class="form-control" id="limit" aria-describedby="limitHelp">
+                <div id="limitHelp" class="form-text">Masukkan batas berat makanan (dalam gram), contoh: 500</div>
+            </div>
+            <div class="mb-3">
+                <label for="detail" class="form-label">Daftar Makanan</label>
+                <textarea class="form-control" name="detail" id="detail" rows="5"
+                placeholder="Contoh:&#10;nasi ketan, 3, 12&#10;kentang, 7, 42&#10;ayam bakar, 5, 25&#10;ikan bakar, 4, 40"></textarea>
+                <div id="limitHelp" class="form-text">Masukkan daftar menu makanan dengan format: <code>nama, berat, protein</code><br>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% if isSubmit %}
+        <section>
+            <div class="border border-3 border-primary w-75 h-auto mx-auto text-center rounded rounded-3">
+                <h5 class="fw-bold my-2">Space State Tree dari Algoritma Best-First Branch-and-Bound</h5>
+                <div id="graph" class="text-center w-100 my-3"></div>
+            </div>
+            <pre id="resultGraph" class="hiding d-none">
+                {{graph}}
+            </pre>
+            <div class="w-75 mx-auto border border-3 border-primary rounded rounded-3 my-3 p-3">
+                <h5 class="fw-bold text-center">Hasil</h5>
+                <h6>Waktu eksekusi program: </h6> <p>{{time}} detik</p>
+                <h6>Jumlah protein maksimal yang bisa didapat: </h6> <p>{{maxProfit}} protein.</p>
+                <h6>Makanan yang harus diambil yaitu:</h6>
+                <ol>
+                    {%- for i in range(selectedItems| length) -%}
+                        <li>{{i+1}}. {{selectedItems[i]}}</li>
+                    {%- endfor -%}
+                </ol>
+            </div>
+        </section>
+        {% endif %}
+    </main>
 {% endblock %}
