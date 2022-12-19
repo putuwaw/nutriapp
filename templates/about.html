@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %} NutriApp | Tentang Aplikasi {% endblock %}
+{% block body %}
+<section class="container-lg col-xxl-8 px-4 pb-5">
+    <div class="px-4 py-5 mb-5 text-center">
+        <div>
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/logo.png') }}" alt="" width="200" height="200">
+        </div>
+        <h1 class="display-6 fw-bold mb-3">Tentang <span class="text-orange-s">NutriApp</span></h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">NutriApp berasal dari kata nutrisi dan aplikasi.
+            Aplikasi ini dibuat dalam rangka memenuhi tugas akhir Mata Kuliah Desain dan Analisis Algoritma, Prodi Informatika tahun 2022.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="pb-5 mb-5">
+    <div class="row text-center pb-5">
+        <h1 class="display-6 fw-bold mb-3 pb-5">Pengembang <span class="text-orange-s">NutriApp</span></h1>
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
+            <p class="fs-6">NIM 2108561XXX</p>
+        </div>
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
+            <p>NIM 2108561XXX</p>
+        </div>
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
+            <p>NIM 2108561XXX</p>
+        </div>
+        <div class="col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
+            <p>NIM 2108561XXX</p>
+        </div>
+    </div>
+</section>
+<section class="pb-5 mb-5">
+    <div class="row align-items-md-stretch text-center pb-5 mb-3">
+        <h1 class="display-6 fw-bold mb-3 pb-5">Teknologi <span class="text-orange-s">NutriApp</span></h1>
+        <div class="col-md-6">
+            <div class="h-100 p-4 rounded-3 btn-orange-reverse shadow">
+                <h2 class="fs-3 mt-3 fw-bold">Flask</h2>
+                <hr>
+                <p class="lead">Flask adalah sebuah web framework yang ditulis dengan bahasa Python dan tergolong sebagai jenis microframework. Flask berfungsi sebagai kerangka kerja aplikasi dan tampilan dari suatu web. </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="h-100 p-4 rounded-3 btn-orange-reverse shadow">
+                <h2 class="fs-3 mt-3 fw-bold">Vercel</h2>
+                <hr>
+                <p class="lead">Vercel adalah sebuah platform atau penyedia layanan hosting yang dapat digunakan untuk deploy berbagai macam aplikasi frontend. Selain itu, Vercel juga mendukung untuk melakukan deploy aplikasi Flask.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row featurette text-center">
+        <h1 class="display-6 fw-bold mb-3 pb-5">Dokumentasi <span class="text-orange-s">NutriApp</span></h1>
+        <div class="col-md-7 text-start">
+            <div class="d-flex flex-column justify-content-center h-100 align-items-start ">
+                <p class="lead">Seluruh dokumentasi dari aplikasi NutriApp, baik berupa source code dan laporan tersedia pada halaman GitHub.</p>
+                <div>
+                    <a href="https://github.com/putuwaw/nutriapp">
+                        <button type="button" class="shadow btn btn-orange btn-lg px-4 me-md-2 text-white">Source Code</button>
+                    </a>
+                    <a href="https://github.com/putuwaw/nutriapp">
+                        <button type="button" class="shadow btn btn-orange btn-lg px-4 me-md-2 text-white">Laporan</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="shadow-lg">
+                <img class="img-fluid overflow-hidden rounded rounded-2 shadow-lg" src="{{ url_for('static', filename='images/githubweb.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
