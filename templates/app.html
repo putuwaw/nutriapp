@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} NutriApp | Aplikasi {% endblock %}
+{% block body %}
+    <section data-aos="fade-up" class="mt-3 min-vh-100">
+        <form action="" method="post">
+            <div class="mb-3">
+                <p class="lead fw-semibold">Batas Berat:</p>
+                <input type="number" name="limit" class="form-control p-2" id="limit" aria-describedby="limitHelp" required>
+                <p class=" ">Masukkan batas berat makanan (dalam gram), contoh: <span class="fw-bold">500</span></p>
+            </div>
+            <div class="mb-3">
+                <p class="lead fw-semibold">Daftar Makanan:</p>
+                <textarea class="form-control" name="detail" id="detail" rows="6" required
+                placeholder="Contoh:&#10;nasi putih, 300, 21.3&#10;telur, 60, 7.5&#10;daging ayam, 110, 25.41&#10;ikan bakar, 95, 26.19"></textarea>
+                <p class="">Masukkan daftar menu makanan dengan format: <span class="fw-bold">
+                    nama, berat, protein
+                </span> 
+                </p>
+            </div>
+            <button type="submit" class="btn btn-orange text-white">Kalkulasi</button>
+        </form>
+        {% if isSubmit %}
+        <section class="mt-5">
+            <div class="border-orange w-75 h-auto mx-auto text-center rounded rounded-3">
+                <h3 class="fw-bold my-3">Space State Tree</h3>
+                <div id="graph" class="text-center w-100 my-3"></div>
+            </div>
+            <pre id="resultGraph" class="hiding d-none">
+                {{graph}}
+            </pre>
+            <div class="w-75 mx-auto border-orange rounded rounded-3 my-3 p-3">
+                <h3 class="fw-bold text-center">Hasil</h3>
+                <h6 class="lead fw-semibold">Waktu eksekusi program: </h6> <p class="lead">{{time}} detik</p>
+                <h6 class="lead fw-semibold">Jumlah protein maksimal yang bisa didapat: </h6> <p class="lead">{{maxProfit}} protein.</p>
+                <h6 class="lead fw-semibold">Makanan yang harus diambil yaitu:</h6>
+                <ol class="lead">
+                    {%- for i in range(selectedItems| length) -%}
+                        <li>{{i+1}}. {{selectedItems[i]}}</li>
+                    {%- endfor -%}
+                </ol>
+            </div>
+        </section>
+        {% endif %}
+    </section>
+{% endblock %}
