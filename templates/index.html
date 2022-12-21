@@ -1,43 +1,84 @@
 {% extends "base.html" %}
-{% block title %} NutriApp {% endblock %}
+{% block title %} NutriApp | Beranda {% endblock %}
 {% block body %}
-    <main>
-        <form action="" method="post">
-            <div class="mb-3">
-                <label for="limit" class="form-label">Batas Berat:</label>
-                <input type="number" name="limit" class="form-control" id="limit" aria-describedby="limitHelp">
-                <div id="limitHelp" class="form-text">Masukkan batas berat makanan (dalam gram), contoh: 500</div>
+    <section data-aos="fade-up" class="container-lg col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{{ url_for('static', filename='images/hero.png') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
-            <div class="mb-3">
-                <label for="detail" class="form-label">Daftar Makanan</label>
-                <textarea class="form-control" name="detail" id="detail" rows="5"
-                placeholder="Contoh:&#10;nasi ketan, 3, 12&#10;kentang, 7, 42&#10;ayam bakar, 5, 25&#10;ikan bakar, 4, 40"></textarea>
-                <div id="limitHelp" class="form-text">Masukkan daftar menu makanan dengan format: <code>nama, berat, protein</code><br>
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-6 fw-bold lh-sm mb-3 text-slate">Pemilihan Nutrisi Jadi Mudah dengan <span class="text-orange-s">NutriApp</span></h1>
+                <p class="lead">Dapatkan pilihan makanan yang mengandung protein tertinggi dengan cepat dan akurat.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="#mulai">
+                        <button type="button" class="btn btn-orange btn-lg px-4 me-md-2 text-white shadow">Mulai</button>
+                    </a>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        {% if isSubmit %}
-        <section>
-            <div class="border border-3 border-primary w-75 h-auto mx-auto text-center rounded rounded-3">
-                <h5 class="fw-bold my-2">Space State Tree dari Algoritma Best-First Branch-and-Bound</h5>
-                <div id="graph" class="text-center w-100 my-3"></div>
+        </div>
+    </section>
+    <section id="mulai" class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 data-aos="fade-up" class="display-6 fw-bold pt-lg-5 pb-2">Apa itu <span class="text-orange-s">NutriApp?</span></h1>
+        <div data-aos="fade-up" class="col-lg-6 mx-auto">
+            <p class="lead mb-4">NutriApp adalah sebuah aplikasi berbasis website atau web app yang mampu untuk melakukan pemilihan makanan dengan kandungan protein tertinggi, sehingga Anda tidak bingung dalam memilih makanan.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="/about">
+                    <button type="button" class="btn btn-lg btn-orange-reverse px-4 shadow">Selengkapnya</button>
+                </a>
             </div>
-            <pre id="resultGraph" class="hiding d-none">
-                {{graph}}
-            </pre>
-            <div class="w-75 mx-auto border border-3 border-primary rounded rounded-3 my-3 p-3">
-                <h5 class="fw-bold text-center">Hasil</h5>
-                <h6>Waktu eksekusi program: </h6> <p>{{time}} detik</p>
-                <h6>Jumlah protein maksimal yang bisa didapat: </h6> <p>{{maxProfit}} protein.</p>
-                <h6>Makanan yang harus diambil yaitu:</h6>
-                <ol>
-                    {%- for i in range(selectedItems| length) -%}
-                        <li>{{i+1}}. {{selectedItems[i]}}</li>
-                    {%- endfor -%}
-                </ol>
+        </div>
+        <div data-aos="fade-up" class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5">
+                <img src="{{ url_for('static', filename='images/section.png') }}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
             </div>
-        </section>
-        {% endif %}
-    </main>
+        </div>
+    </section>
+    <section class="container px-4 py-5">
+        <h1 data-aos="fade-up" class="display-6 fw-bold pt-lg-5 pb-2 text-center mt-lg-5">Mengapa harus <span class="text-orange-s">NutriApp?</span></h1>
+        <div data-aos="fade-up" class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div class="w-100 d-flex flex-column text-center align-items-center justify-content-center">
+                    <div class="feature-icon w-25 d-inline-flex align-items-center justify-content-center bg-orange-s bg-gradient fs-2 mb-3">
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/opensource.png') }}" alt="Open Source">
+                    </div>
+                    <h3 class="fs-2 fw-bold">Open Source</h3>
+                    <p>NutriApp bersifat Open Source, artinya semua orang dapat memberikan kontribusi untuk pengembangan dan melihat kode sumber dari aplikasi.</p>
+                </div>
+            </div>
+            <div class="feature col">
+                <div class="w-100 d-flex flex-column text-center align-items-center justify-content-center">
+                    <div class="feature-icon w-25 d-inline-flex align-items-center justify-content-center bg-orange-s bg-gradient fs-2 mb-3">        
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/bnbalgo.png') }}" alt="Open Source">
+                    </div>
+                    <h3 class="fs-2 fw-bold">Algoritma B&B</h3>
+                    <p>NutriApp menggunakan algoritma Branch-and-Bound dengan pendekatan Best-First, yang biasa digunakan untuk pemecahan masalah optimasi atau optimization problem.</p>
+                </div>
+            </div>
+            <div class="feature col">
+                <div class="w-100 d-flex flex-column text-center align-items-center justify-content-center">
+                    <div class="feature-icon w-25 d-inline-flex align-items-center justify-content-center bg-orange-s bg-gradient fs-2 mb-3">
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/website.png') }}" alt="Open Source">
+                    </div>
+                    <h3 class="fs-2 fw-bold">Berbasis Web</h3>
+                    <p>NutriApp adalah aplikasi berbasis website, sehingga bisa diakses kapan saja dan dimana saja baik menggunakan perangkat seperti laptop maupun smartphone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade-up" class="container-lg col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{{ url_for('static', filename='images/footer.png') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-6 fw-bold lh-sm mb-3 text-slate">Pilih Makanan Bernutrisi dengan <span class="text-orange-s">NutriApp!</span></h1>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="/app">
+                        <button type="button" class="shadow btn btn-orange btn-lg px-4 me-md-2 text-white mt-lg-3">Coba Sekarang</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 {% endblock %}
