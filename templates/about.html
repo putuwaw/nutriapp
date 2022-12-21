@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %} NutriApp | Tentang Aplikasi {% endblock %}
 {% block body %}
-<section class="container-lg col-xxl-8 px-4 pb-5">
+<section data-aos="fade-up" class="container-lg col-xxl-8 px-4 pb-5">
     <div class="px-4 py-5 mb-5 text-center">
         <div>
             <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/logo.png') }}" alt="" width="200" height="200">
@@ -16,40 +16,40 @@
 </section>
 <section class="pb-5 mb-5">
     <div class="row text-center pb-5">
-        <h1 class="display-6 fw-bold mb-3 pb-5">Pengembang <span class="text-orange-s">NutriApp</span></h1>
-        <div class="col-lg-3">
-            <img width="140" height="140" class="img-fluid" src="{{ url_for('static', filename='images/putu.png') }}" alt="">
-            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
-            <p class="fs-6">NIM 2108561XXX</p>
+        <h1 data-aos="fade-up" class="display-6 fw-bold mb-3 pb-5">Pengembang <span class="text-orange-s">NutriApp</span></h1>
+        <div data-aos="fade-up" class="col-lg-3">
+            <img width="140" height="140" class="img-fluid rounded-circle" src="https://avatars.githubusercontent.com/u/90038606?v=4" alt="">
+            <h2 class="fs-4 mt-3 fw-bold">Putu Widyantara Artanta Wibawa</h2>
+            <p class="fs-6">NIM 2108561005</p>
         </div>
-        <div class="col-lg-3">
-            <img width="140" height="140" class="img-fluid" src="{{ url_for('static', filename='images/putu.png') }}" alt="">
-            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
-            <p>NIM 2108561XXX</p>
+        <div data-aos="fade-up" class="col-lg-3">
+            <img width="140" height="140" class="img-fluid rounded-circle" src="https://avatars.githubusercontent.com/u/103046943?v=4" alt="">
+            <h2 class="fs-4 mt-3 fw-bold">Putu Putri Pratiwi</h2>
+            <p>NIM 2108561010</p>
         </div>
-        <div class="col-lg-3">
-            <img width="140" height="140" class="img-fluid" src="{{ url_for('static', filename='images/putu.png') }}" alt="">
-            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
-            <p>NIM 2108561XXX</p>
+        <div data-aos="fade-up" class="col-lg-3">
+            <img width="140" height="140" class="img-fluid rounded-circle" src="https://avatars.githubusercontent.com/u/97933526?s=64&v=4" alt="">
+            <h2 class="fs-4 mt-3 fw-bold">Kenny Belle Lesmana</h2>
+            <p>NIM 2108561015</p>
         </div>
-        <div class="col-lg-3">
-            <img width="140" height="140" class="img-fluid" src="{{ url_for('static', filename='images/putu.png') }}" alt="">
-            <h2 class="fs-4 mt-3 fw-bold">Nama Anda</h2>
-            <p>NIM 2108561XXX</p>
+        <div data-aos="fade-up" class="col-lg-3">
+            <img width="140" height="140" class="img-fluid rounded-circle" src="https://avatars.githubusercontent.com/u/84718700?v=4" alt="">
+            <h2 class="fs-4 mt-3 fw-bold">I Made Ari Madya Santosa</h2>
+            <p>NIM 2108561020</p>
         </div>
     </div>
 </section>
 <section class="pb-5 mb-5">
     <div class="row align-items-md-stretch text-center pb-5 mb-3">
-        <h1 class="display-6 fw-bold mb-3 pb-5">Teknologi <span class="text-orange-s">NutriApp</span></h1>
-        <div class="col-md-6 mb-3 mb-lg-0">
+        <h1 data-aos="fade-up" class="display-6 fw-bold mb-3 pb-5">Teknologi <span class="text-orange-s">NutriApp</span></h1>
+        <div data-aos="fade-up" class="col-md-6 mb-3 mb-lg-0">
             <div class="h-100 p-4 rounded-3 btn-orange-reverse shadow">
                 <h2 class="fs-3 mt-3 fw-bold">Flask</h2>
                 <hr>
                 <p class="lead">Flask adalah sebuah web framework yang ditulis dengan bahasa Python dan tergolong sebagai jenis microframework. Flask berfungsi sebagai kerangka kerja aplikasi dan tampilan dari suatu web. </p>
             </div>
         </div>
-        <div class="col-md-6">
+        <div data-aos="fade-up" class="col-md-6">
             <div class="h-100 p-4 rounded-3 btn-orange-reverse shadow">
                 <h2 class="fs-3 mt-3 fw-bold">Vercel</h2>
                 <hr>
@@ -61,8 +61,8 @@
 
 <section>
     <div class="row featurette text-center">
-        <h1 class="display-6 fw-bold mb-3 pb-5">Dokumentasi <span class="text-orange-s">NutriApp</span></h1>
-        <div class="col-md-7 text-start">
+        <h1 data-aos="fade-up" class="display-6 fw-bold mb-3 pb-5">Dokumentasi <span class="text-orange-s">NutriApp</span></h1>
+        <div data-aos="fade-up" class="col-md-7 text-start">
             <div class="d-flex flex-column justify-content-center h-100 align-items-start ">
                 <p class="lead">Seluruh dokumentasi dari aplikasi NutriApp, baik berupa source code dan laporan tersedia pada halaman GitHub.</p>
                 <div>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5 mt-3 mt-lg-0">
+        <div data-aos="fade-up" class="col-md-5 mt-3 mt-lg-0">
             <div class="shadow-lg">
                 <img class="img-fluid overflow-hidden rounded rounded-2 shadow-lg" src="{{ url_for('static', filename='images/githubweb.png') }}" alt="">
             </div>

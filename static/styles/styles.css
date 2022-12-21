@@ -42,7 +42,7 @@ html {
 }
 
 .text-slate{
-    color: rgb(22 30 50) !important;
+    color: #161e32 !important;
 }
 .bg-green-t{
     background-color: #7ED957f7 !important;
@@ -57,16 +57,16 @@ html {
 }
 
 .btn-orange-reverse{
-    transition: .3s;
     background-color: white;
     color: #161e32 !important;
     border: 1px solid #161e32 !important;
+    transition: .3s;
 }
 .btn-orange-reverse:hover{
-    transition: .3s;
     background-color: #FF914D !important;
     color: white !important;
     border: 1px solid #FF914D !important;
+    transition: .3s;
 }
 
 .border-orange{
