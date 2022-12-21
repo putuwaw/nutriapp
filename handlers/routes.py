@@ -2,8 +2,16 @@ from flask import render_template, request
 from modules import branch_and_bound as bnb
 
 def configure_routes(app):
-    @app.route("/", methods=["GET", "POST"])
+    @app.route("/")
     def index():
+        return render_template("index.html")
+
+    @app.route("/about")
+    def about():
+        return render_template("about.html")
+
+    @app.route("/app", methods=["GET", "POST"])
+    def application():
         if request.method == "POST":
             limit = request.form["limit"]
             detail = request.form["detail"]
@@ -22,6 +30,6 @@ def configure_routes(app):
                 "graph": graph,
                 "time": time
             }
-            return render_template("index.html", **templateData)
+            return render_template("app.html", **templateData)
         else:
-            return render_template("index.html")
+            return render_template("app.html")
