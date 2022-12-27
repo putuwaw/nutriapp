@@ -33,6 +33,7 @@ NutriApp is created using:
 ```
 NutriApp
 ├── .github
+├── docs
 ├── handlers
 ├── modules
 ├── static
@@ -50,6 +51,7 @@ NutriApp
 └── vercel.json
 ```
 - [.github](.github/) is a folder that used to place Github related stuff, like issue template and CI pipeline.
+- [docs](docs/) contain documentation of this app.
 - [handlers](handlers/) contain handler to handling HTTP request methods, especially POST method.
 - [modules](modules/) contain the main modules for implement the best-first branch-and-bound algorithm.
 - [static](static/) contain static files like images, CSS, and JavaScript files.
