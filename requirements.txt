@@ -15,4 +15,4 @@ pycodestyle==2.10.0
 pyparsing==3.0.9
 pytest==7.2.1
 tomli==2.0.1
-Werkzeug==2.2.2
+Werkzeug==2.2.3
